@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'headerfooter.html' %}
+    {% block content %}
+    <div class="center" style="flex: 1">
+      <h4 class="header orange-text">Face Mask Classifier</h4>
+      <span>
+        Submit an image, and the CNN model will categorize whether the individual is wearing a mask or not.</span>
+    <div><br></div>
+    <div class="column center">
+    <form action='/predict' method="post">
+        <div class="center">
+          <div class="input-field s5">
+            <b>Please select an image</b>
+            <br>
+
+            <br>
+          <input style="margin-left: 5rem;" id="image" type="file">
+          </div>
+            
+      </div>
+    <div><br></div>
+      <div>
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+      
+    </form>
+  </div>
+  </div>
+
+        {{pred}}<br>
+    
+  {% endblock %}
+</html>

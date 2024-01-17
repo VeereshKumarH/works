@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Home
+        </title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body style="display: flex;flex-direction: column;  height: 100vh;">
+        <nav>
+            <div class="nav-wrapper" style="display: flex; justify-content: space-between; align-items: center;">
+              <a href="#!" class="brand-logo">
+                <img src="{{ url_for('static', filename='images/v_logo.png') }}" alt="Logo">
+              </a>
+              <div class="center-align" style="flex-grow: 1;">
+                    For Self Practice
+              </div>          
+              <ul class="right hide-on-med-and-down" style="display: flex; align-items: center;">
+                <li>Welcome {{user}}!!</li>
+                <li class="divider"></li>
+                <li><a href="#!">
+                    <img src="{{ url_for('static', filename='images/settings.png') }}" alt="settings" class="header_content_img">
+                </a></li>
+              </ul>
+            </div>
+          </nav>        
+        <div style="flex: 1;">
+            <div class="row">
+                <a href="{{url_for('facemaskclassifier')}}">
+                    <div class="col s12 m3">
+                        <div class="z-depth-3">
+                            <div class="card">
+                                <div class="card-content">
+                                <span class="card-title">Face Mask Classifier</span>
+                                <p>CNN model to detect person wearing mask</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="{{url_for('catdogclassifier')}}">
+                    <div class="col s12 m3">
+                        <div class="z-depth-3">
+                            <div class="card">
+                                <div class="card-content">
+                                <span class="card-title">Animal Classifier</span>
+                                <p>CNN model to classify cats and dogs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="{{url_for('digitsclassifier')}}">
+                    <div class="col s12 m3">
+                        <div class="z-depth-3">
+                            <div class="card">
+                                <div class="card-content">
+                                <span class="card-title">Digit Classifier</span>
+                                <p>CNN model to detect digits from 0 to 9</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </a>    
+                </div>
+                <div class="row">
+                    <a href="{{url_for('irisspeciesclassifier')}}">
+                        <div class="col s12 m3">
+                            <div class="z-depth-3">
+                                <div class="card">
+                                    <div class="card-content">
+                                    <span class="card-title">Iris Species Classifier</span>
+                                    <p>ML model to classify Iris Species</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{url_for('titanicsurvivor')}}">
+                        <div class="col s12 m3">
+                            <div class="z-depth-3">
+                                <div class="card">
+                                    <div class="card-content">
+                                    <span class="card-title">Titanic Survivor</span>
+                                    <p>ML model to predict Survivor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{url_for('homepricepredictor')}}">
+                        <div class="col s12 m3">
+                            <div class="z-depth-3">
+                                <div class="card">
+                                    <div class="card-content">
+                                    <span class="card-title">Home Price predictor</span>
+                                    <p>Yet to release</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </a>               
+                    </div>
+            </div>
+        </div>
+        <nav><!--header -->
+            <div class="nav-wrapper">
+              <ul class="right hide-on-med-and-down">
+                <li>Thanks for Visiting!!</li>
+              </ul>
+            </div>
+          </nav>
+    </body>
+</html>
