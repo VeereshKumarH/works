@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "https://e8be-34-87-66-145.ngrok-free.app/predict"
+API_URL = "https://c135-34-87-66-145.ngrok-free.app/predict"
 
 st.title("Financial RAG Chatbot")
 st.write("Ask financial questions based on company earnings reports!")
